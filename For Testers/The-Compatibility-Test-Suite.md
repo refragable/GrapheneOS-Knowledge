@@ -15,34 +15,34 @@ You're going to need a few things to test GrapheneOS.
 
 On the software side of things, you're going to need
 
-* The compatibility test suite software, which is located at: `https://dl.google.com/dl/android/cts/android-cts-10_r3-linux_x86-arm.zip`
+* The compatibility test suite software, which is located at: `https://dl.google.com/dl/android/cts/android-cts-10_r4-linux_x86-arm.zip`
 * The compatibility test media, which you can also download at: `https://dl.google.com/dl/android/cts/android-cts-media-1.4.zip`
-* The Android Studio, which is available for download at: `https://developer.android.com/studio/` If you're feeling brave, you can simply download it directly from the mirror at `https://redirector.gvt1.com/edgedl/android/studio/ide-zips/3.6.3.0/android-studio-ide-192.6392135-linux.tar.gz`
+* The Android Studio, which is available for download at: `https://developer.android.com/studio/` If you're feeling brave, you can simply download it directly from the mirror at `https://redirector.gvt1.com/edgedl/android/studio/ide-zips/4.0.0.16/android-studio-ide-193.6514223-linux.tar.gz`
 
 Or you can obtain it all at once by running:
 
 ```
-user@computer: ~ $ wget https://dl.google.com/dl/android/cts/android-cts-10_r3-linux_x86-arm.zip https://dl.google.com/dl/android/cts/android-cts-media-1.4.zip https://redirector.gvt1.com/edgedl/android/studio/ide-zips/3.6.3.0/android-studio-ide-192.6392135-linux.tar.gz
+user@computer: ~ $ wget https://dl.google.com/dl/android/cts/android-cts-10_r4-linux_x86-arm.zip https://dl.google.com/dl/android/cts/android-cts-media-1.4.zip https://redirector.gvt1.com/edgedl/android/studio/ide-zips/4.0.0.16/android-studio-ide-193.6514223-linux.tar.gz
 ```
 
 ### Setting up
 Android Studio will need to be set up, as the Compatibility Test Suite depends on some software packages included in Android Studio. Simply download the Android Studio and run `studio.sh` in the `bin` directory to get it set up for your system. By default, it will save itself in `$HOME/Android`. You'll want to add this to your command path by running:
 
 ```
-user@computer: ~ $ tar -xf android-studio-ide-192.6392135-linux.tar.gz
+user@computer: ~ $ tar -xf android-studio-ide-193.6514223-linux.tar.gz
 user@computer: ~ $ ./android-studio/bin/studio.sh
 ```
 And following the instructions. By default, it will install to a directory called `Android` in your home directory. Unless you change the defaults, you should be able to add the tools to your command path using the command:
 ```
-user@computer: ~ $ export PATH=$PATH:$HOME/Android/Sdk/platform-tools/:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/build-tools/29.0.2
+user@computer: ~ $ export PATH=$PATH:$HOME/Android/Sdk/platform-tools/:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/build-tools/29.0.3
 ```
 If you would like this to be done automatically for you after closing the window, run the following:
 ```
-user@computer: ~ $ echo "export PATH=$PATH:$HOME/Android/Sdk/platform-tools/:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/build-tools/29.0.2" >> ~/.bashrc
+user@computer: ~ $ echo "export PATH=$PATH:$HOME/Android/Sdk/platform-tools/:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/build-tools/29.0.3" >> ~/.bashrc
 ```
 You can then unpack the compatibility test suite to your computer and appending it to your path by running the following:
 ```
-user@computer: ~ $ unzip android-cts-10_r3-linux_x86-arm.zip
+user@computer: ~ $ unzip android-cts-10_r4-linux_x86-arm.zip
 user@computer: ~ $ export PATH=$PATH:$(pwd)/android-cts/tools/:
 ```
 If you'd like to make it persistent, you can run the following command:
@@ -117,7 +117,7 @@ Which should bring you to the following screen:
 Notice:
 We collect anonymous usage statistics in accordance with our Content Licenses (https://source.android.com/setup/start/licenses), Contributor License Agreement (https://opensource.google.com/docs/cla/), Privacy Policy (https://policies.google.com/privacy) and Terms of Service (https://policies.google.com/terms).
 ==================
-Android Compatibility Test Suite 10_r3 (6221200)
+Android Compatibility Test Suite 10_r4 (6482717)
 Use "help" or "help all" to get more information on running commands.
 cts-tf >
 ```
